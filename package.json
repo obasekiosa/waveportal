@@ -7,7 +7,6 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "ethers": "^5.4.4",
-    "gh-pages": "^3.2.3",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.2.0"
@@ -35,5 +34,9 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://obasekiosa.github.io/waveportal"
+  "homepage": "https://obasekiosa.github.io/waveportal",
+  "devDependencies": {
+    "gh-pages": "^3.2.3",
+    "sass": "^1.48.0"
+  }
 }
