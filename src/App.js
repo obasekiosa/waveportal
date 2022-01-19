@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import { ethers } from "ethers";
-import './App.css';
+import './App.scss';
 import abi from "./utils/wavePortal.json";
 
 
@@ -151,38 +151,49 @@ export default function App() {
   useEffect(() => {
     checkIfWalletIsConnected();
   }, []);
-  
+
   return (
-    <div className="mainContainer">
-
-      <div className="dataContainer">
-        <div className="header">
-          <span role="img" aria-label="wave emoji">👋</span> Hey there!
-        </div>
-
-        <div className="bio">
-          Connect your Ethereum wallet and wave at me!
-        </div>
-
-        <button className="waveButton" onClick={wave}>
-          Wave at Me
-        </button>
-
-        {!currentAccount && (
-          <button className="waveButton" onClick={connectWallet}>
-            Connect Wallet
-          </button>
-        )}
-
-        {allWaves.map((wave, index) => {
-          return (
-            <div key={index} style={{ backgroundColor: "OldLace", marginTop: "16px", padding: "8px" }}>
-              <div>Address: {wave.address}</div>
-              <div>Time: {wave.timestamp.toString()}</div>
-              <div>Message: {wave.message}</div>
-            </div>)
-        })}
-      </div>
+    <div className="App">
+      <div className="header"></div>
+      <div className="navigation"></div>
+      <div className="main"></div>
+      <div className="left-sidebar"></div>
+      <div className="right-sidebar"></div>
+      <div className="footer"></div>
     </div>
   );
+  
+  // return (
+  //   <div className="mainContainer">
+
+  //     <div className="dataContainer">
+  //       <div className="header">
+  //         <span role="img" aria-label="wave emoji">👋</span> Hey there!
+  //       </div>
+
+  //       <div className="bio">
+  //         Connect your Ethereum wallet and wave at me!
+  //       </div>
+
+  //       <button className="waveButton" onClick={wave}>
+  //         Wave at Me
+  //       </button>
+
+  //       {!currentAccount && (
+  //         <button className="waveButton" onClick={connectWallet}>
+  //           Connect Wallet
+  //         </button>
+  //       )}
+
+  //       {allWaves.map((wave, index) => {
+  //         return (
+  //           <div key={index} style={{ backgroundColor: "OldLace", marginTop: "16px", padding: "8px" }}>
+  //             <div>Address: {wave.address}</div>
+  //             <div>Time: {wave.timestamp.toString()}</div>
+  //             <div>Message: {wave.message}</div>
+  //           </div>)
+  //       })}
+  //     </div>
+  //   </div>
+  // );
 }
